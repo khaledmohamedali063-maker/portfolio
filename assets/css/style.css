@@ -281,12 +281,21 @@ body {
   position: relative; width: 120px; height: 120px;
   display: flex; align-items: center; justify-content: center;
 }
-.avatar-initials {
-  width: 100%; height: 100%; border-radius: 50%;
-  background: linear-gradient(135deg, var(--cyan), var(--purple));
-  display: flex; align-items: center; justify-content: center;
-  font-size: 2.5rem; font-weight: 800; color: #fff;
-  z-index: 1; position: relative;
+.about-profile-img {
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  object-fit: cover;
+  z-index: 1;
+  position: relative;
+  border: 2px solid var(--cyan);
+  box-shadow: 0 0 15px rgba(0, 245, 255, 0.3);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.about-profile-img:hover {
+  transform: scale(1.05);
+  box-shadow: 0 0 25px rgba(0, 245, 255, 0.6);
 }
 .avatar-ring {
   position: absolute; inset: -6px; border-radius: 50%;
